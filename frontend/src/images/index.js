@@ -5,11 +5,16 @@ import twitch from './icons/top_icn_twitch.svg'
 import youtube from './icons/top_icn_youtube.svg'
 import mixer from './icons/top_icn_mixer.svg'
 
+import visual from './visual.png';
+import visual_parttern from './visual_parttern.png';
+
 export const Images = {
     dropdown,
     download,
     facebook,
     twitch,
     youtube,
-    mixer
+    mixer,
+    visual,
+    visual_parttern
 }

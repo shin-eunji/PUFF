@@ -1,5 +1,6 @@
 export const Color = {
     DARK: '#151a1d',
+    LIGHT_DARK: '#1b2227',
     LIME: '#cdee0a',
     TOPAZ: '#14cac1',
     YELLOW: '#ddb418',

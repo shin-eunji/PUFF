@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Routes from "./Routes";
+import Header from "./views/components/Header";
 
 
 
@@ -10,6 +11,7 @@ function App (props) {
 
     return (
         <Container>
+            <Header/>
             <Routes/>
         </Container>
     )

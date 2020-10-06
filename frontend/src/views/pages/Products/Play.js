@@ -1,13 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import Visual from "./section/Visual";
 
-function Play (props) {
+function Play(props) {
 
     const {} = props;
 
     return (
         <Container>
-            Play
+            <Visual sort={"play"}
+                    title={""}
+                    description={""}
+                    download={""}
+                    downlaodIcon={""}
+                    caution={""}
+                    thumbnail={""}
+            />
         </Container>
     )
 }

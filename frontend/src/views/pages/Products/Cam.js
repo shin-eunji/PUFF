@@ -1,13 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import Visual from "./section/Visual";
 
-function Cam (props) {
+function Cam(props) {
 
     const {} = props;
 
     return (
         <Container>
-            Cam
+
+            <Visual sort={"cam"}
+                    title={""}
+                    description={""}
+                    download={""}
+                    downlaodIcon={""}
+                    caution={""}
+                    thumbnail={""}
+            />
         </Container>
     )
 }
