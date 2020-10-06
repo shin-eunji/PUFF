@@ -21,12 +21,13 @@ function NavItem (props) {
 const Container = styled.div`
 `
 const Item = styled.div`
-    color: #fff;
-    opacity: .6;
-    font-size: 14px;
     .isActive & {
-        opacity: 1;
-    } 
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.5;
+      
+      
+    }
 `;
 
 export default NavItem;

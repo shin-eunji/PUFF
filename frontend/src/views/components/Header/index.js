@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Nav from "./Nav";
 import Member from "./Member";
 import {withRouter} from "react-router-dom";
-import {Color, pxToRem} from "../../../lib/Styled";
+import {ContentContainer} from "../Components.Styled";
 
 function Header (props) {
 
@@ -12,19 +12,19 @@ function Header (props) {
 
     return (
         <Container>
-            <Logo>puff</Logo>
-            <Gnb>
-                <Nav/>
-                <Member/>
-            </Gnb>
+            <ContentContainer>
+                <Logo>puff</Logo>
+                <Gnb>
+                    <Nav/>
+                    <Member/>
+                </Gnb>
+            </ContentContainer>
         </Container>
     )
 }
 
 
 const Container = styled.div`
-  height: ${pxToRem(80)};
-  background: ${Color.DARK};
 `
 const Logo = styled.div`
 `;
