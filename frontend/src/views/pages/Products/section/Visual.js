@@ -4,7 +4,7 @@ import {ContentContainer} from "../../../components/Components.Styled";
 import {Images} from "../../../../images";
 import {Button} from "../../../components/Button/Button.Styled";
 import {Color, pxToRem} from "../../../../lib/Styled";
-import VisualNav from "./VisualNav";
+import Pagination from "./Pagination";
 
 function Visual (props) {
 
@@ -49,7 +49,7 @@ function Visual (props) {
                 </Thumbnail>
             </SContentContainer>
 
-            <VisualNav sort={sort}/>
+            <Pagination sort={sort}/>
         </Container>
     )
 }
@@ -130,6 +130,18 @@ const Text = styled.div`
     }
 `;
 const Thumbnail = styled.div`
-    background: ${Images.visual_parttern};
+    position:relative;
+    top: 0;
+    right: 0;
+    &::before{
+        content: '';
+        position:absolute;
+        top: ${pxToRem(-100)};
+        right: ${pxToRem(-50)};
+        width: ${pxToRem(470)};
+        height: ${pxToRem(600)};
+        background-image: url(${Images.visual_parttern});
+        z-index: 1000;
+    }
 `;
 export default Visual;
