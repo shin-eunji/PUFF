@@ -16,7 +16,7 @@ function Nav (props) {
         {
             name: '제품',
             to: '/products',
-            isActive: false,
+            isActive: true,
             subRoutes: [
                 {
                     name: 'puff caster',
@@ -57,5 +57,7 @@ function Nav (props) {
 }
 
 const Container = styled.nav`
+    display:flex;
+    align-items:center;
 `
 export default Nav;

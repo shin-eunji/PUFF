@@ -1,18 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from "../../components/Header";
 
-function Home (props) {
+function Play (props) {
 
     const {} = props;
 
     return (
         <Container>
-            <Header/>
+            Play
         </Container>
     )
 }
 
 const Container = styled.div`
 `
-export default Home;
+export default Play;

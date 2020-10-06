@@ -1,8 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
-}
+@charset "UTF-8";
+
+@import '/utils/mixin';
+@import '/base/common';
+@import '/base/normalize';
+@import '/base/reset';
