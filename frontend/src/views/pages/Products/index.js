@@ -4,6 +4,7 @@ import {Switch, Route} from "react-router-dom";
 import Caster from "./Caster";
 import Play from "./Play";
 import Cam from "./Cam";
+import Login from "../Login";
 
 function Products (props) {
 
@@ -12,7 +13,7 @@ function Products (props) {
     return (
         <Container>
             <Switch>
-                <Route path={'/products/caster'} component={Caster}/>
+                <Route exact path={'/products/caster'} component={Caster}/>
                 <Route path={'/products/play'} component={Play}/>
                 <Route path={'/products/cam'} component={Cam}/>
             </Switch>

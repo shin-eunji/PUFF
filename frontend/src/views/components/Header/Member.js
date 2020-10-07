@@ -11,7 +11,9 @@ function Member (props) {
 
     return (
         <Container>
-            <Button size={'small'} sort={'lime'} navigate={'login'} >로그인</Button>
+            <Button size={'small'}
+                    sort={'lime'}
+                    onClick={() => navigate('/login')} >로그인</Button>
         </Container>
     )
 }

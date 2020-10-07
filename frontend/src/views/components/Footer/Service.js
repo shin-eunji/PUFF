@@ -7,20 +7,25 @@ import {Button} from "../Button/Button.Styled";
 
 function Service (props) {
 
-    const {} = props;
+    const {
+        sort,
+        footerButton,
+        caution,
+        downlaodIcon
+    } = props;
 
     return (
         <Container>
             <SContentContainer>
                 <Download>
                     <Button className={'download'}
-                            sort={'caster'}
+                            sort={sort}
                             size={'large'}
                     >
-                        <img src={Images.download} alt="다운로드"/>
-                        PUFFCASTER 다운로드
+                        <img color={sort} src={downlaodIcon} alt="다운로드"/>
+                        {footerButton}
                     </Button>
-                    <div className="caution">Window 64비트 또는 그 이상 (Ver. 10.13.5)</div>
+                    <div className="caution">{caution}</div>
                 </Download>
                 <Text>지금 바로 당신의 라이브를 시작해보세요!</Text>
             </SContentContainer>
@@ -66,9 +71,12 @@ const SContentContainer = styled(ContentContainer)`
 `;
 const Download = styled.div`
     margin-top: ${pxToRem(140)};
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     .download {
         width: ${pxToRem(240)};
-        flex: 2;
+        height: ${pxToRem(60)};
         img {
             margin-right: ${pxToRem(8)};
         }

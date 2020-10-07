@@ -15,7 +15,8 @@ function Visual (props) {
         download,
         downlaodIcon,
         caution,
-        thumbnail
+        thumbnail,
+        more,
     } = props;
 
     return (
@@ -24,9 +25,9 @@ function Visual (props) {
                 <Text>
                     <h2>{title}</h2>
                     <p>{description}</p>
-                    <div className="more">메뉴얼 상세보기</div>
+                    <div className="more">{more}</div>
                     <Button className={'download'}
-                            sort={'caster'}
+                            sort={sort}
                             size={'large'}
                     >
                         <img src={downlaodIcon} alt="다운로드"/>
@@ -42,6 +43,9 @@ function Visual (props) {
                             <img src={Images.mixer} alt="믹서 플랫폼"/>
                         </div>
                     </div>
+                    {
+
+                    }
                 </Text>
                 
                 <Thumbnail>

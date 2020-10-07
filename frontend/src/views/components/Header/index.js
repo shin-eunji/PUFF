@@ -21,6 +21,7 @@ function Header (props) {
                 </Gnb>
             </SContentContainer>
         </Container>
+
     )
 }
 

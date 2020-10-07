@@ -5,11 +5,20 @@ import Info from "./Info";
 
 function Footer (props) {
 
-    const {} = props;
+    const {
+        sort,
+        footerButton,
+        caution,
+        downlaodIcon
+    } = props;
 
     return (
         <Container>
-            <Service/>
+            <Service sort={sort}
+                     footerButton={footerButton}
+                     caution={caution}
+                     downlaodIcon={downlaodIcon}
+            />
             <Info/>
         </Container>
     )

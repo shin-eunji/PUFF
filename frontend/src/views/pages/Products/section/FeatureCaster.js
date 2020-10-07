@@ -2,13 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import FeatureSection from "./FeatureSection";
 
-function Features(props) {
+function FeatureCaster (props) {
 
     const {} = props;
 
     return (
         <Container>
-
             <FeatureSection thumbnail={"PUFF EFFECT"}
                             title={"라이브를 \n 더욱 라이브답게!"}
                             description={"캐스터에서 지원하는 이펙트 아이템은\n누구나 손쉽게 사용할 수 있으며, 당신\n의 라이브를 마치 편집된 영상과 같이\n바꾸어줍니다."}
@@ -28,4 +27,4 @@ function Features(props) {
 
 const Container = styled.div`
 `
-export default Features;
+export default FeatureCaster;

@@ -47,6 +47,7 @@ export const Button = styled.div`
     font-weight:bold;
     border: 1px solid transparent; 
     border-radius: ${pxToRem(6)};
+    background: #151ad40;
     &:focus {
         outline: 0;
     }

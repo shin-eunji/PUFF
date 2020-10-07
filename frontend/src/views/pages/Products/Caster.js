@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Visual from "./section/Visual";
 import {Images} from "../../../images";
-import Features from "./section/Features";
+import FeatureCaster from "./section/FeatureCaster";
 import Footer from "../../components/Footer";
 
 function Caster(props) {
@@ -17,12 +17,17 @@ function Caster(props) {
                     downlaodIcon={Images.download}
                     download={"PUFFCASTER 다운로드"}
                     caution={"Window 64비트 또는 그 이상 (Ver. 10.13.5)"}
-                    thumbnail={Images.visual}
+                    thumbnail={Images.visual_caster}
+                    more={"메뉴얼 상세보기"}
             />
 
-            <Features/>
+            <FeatureCaster/>
+            <Footer sort={"caster"}
+                    footerButton={"PUFFCASTER 다운로드"}
+                    downlaodIcon={Images.download}
+                    caution={"Window 64비트 또는 그 이상 (Ver. 10.13.5)"}
+            />
 
-            <Footer/>
 
         </Container>
     )

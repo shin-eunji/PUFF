@@ -1,7 +1,8 @@
 import {createActions, createReducer} from 'reduxsauce'
 
 const initialState = {
-    openSidebar: false
+    openSidebar: false,
+    dropdown: false
 }
 
 export const Action = createActions({

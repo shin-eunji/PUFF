@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import cn from 'classnames'
 import {Images} from "../../../images";
 import {pxToRem} from "../../../lib/Styled";
+import {navigate} from "../../../lib/History";
+import {useSelector} from "react-redux";
+import appActions from "../../../redux/actionCreators";
+import Dropdown from "./Dropdown";
 
 function NavItem (props) {
 
@@ -13,12 +17,24 @@ function NavItem (props) {
         subRoutes
     } = props;
 
+    const dropdown = state => state.app
+
+
+
     return (
         <Container className={cn('NavItem', {isActive})}>
-            <Item>{name}
+            <Item onClick={() => navigate(to)}>{name}
                 {
                     subRoutes &&
-                    <img src={Images.dropdown} alt="dropdown"/>
+                    <img src={Images.dropdown} alt="dropdown"
+                         onClick={() => appActions.updateState({
+                            dropdown: false
+                         })}
+                    />
+                }
+                {
+                    dropdown &&
+                    <Dropdown dropdown/>
                 }
             </Item>
         </Container>
