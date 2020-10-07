@@ -3,7 +3,7 @@ import {bindActionCreators} from "redux";
 
 import {Action as AppAction} from './app/redux'
 
-const dispatch = store.dispatch;
+const {dispatch} = store;
 
 const appActions = bindActionCreators(AppAction.Creators.updateState, dispatch);
 

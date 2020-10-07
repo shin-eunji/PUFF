@@ -1,40 +1,43 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import cn from 'classnames'
 import {Images} from "../../../images";
 import {pxToRem} from "../../../lib/Styled";
 import {navigate} from "../../../lib/History";
-import {useSelector} from "react-redux";
+import DropdownContainer from "./DropdownContainer";
 import appActions from "../../../redux/actionCreators";
-import Dropdown from "./Dropdown";
+import {useDispatch, useSelector} from "react-redux";
 
 function NavItem (props) {
 
     const {
         name,
+        dropdown,
         to,
         isActive,
-        subRoutes
+        subRoutes,
     } = props;
 
-    const dropdown = state => state.app
-
-
+    const app = useSelector(state => state.app)
+    const dispatch = useDispatch()
 
     return (
         <Container className={cn('NavItem', {isActive})}>
-            <Item onClick={() => navigate(to)}>{name}
+            <Item dropdown onClick={() =>
+                console.log(appActions.updateState)
+                // appActions.updateState({
+                // dropdown: true
+                //
+                // })
+            }>{name}
                 {
                     subRoutes &&
-                    <img src={Images.dropdown} alt="dropdown"
-                         onClick={() => appActions.updateState({
-                            dropdown: false
-                         })}
-                    />
+                    <img src={Images.dropdown} alt="dropdown"/>
+
                 }
                 {
-                    dropdown &&
-                    <Dropdown dropdown/>
+                    subRoutes && app &&
+                    <DropdownContainer dropdown={dropdown}/>
                 }
             </Item>
         </Container>
@@ -51,7 +54,6 @@ const Item = styled.div`
     line-height: 1.5;
     display:flex;
     align-items:center;
-    cursor: pointer;
     .isActive & {
       opacity: 1;
     }
@@ -59,5 +61,4 @@ const Item = styled.div`
         margin-left: ${pxToRem(10)};
     }
 `;
-
 export default NavItem;

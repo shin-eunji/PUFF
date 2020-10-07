@@ -10,9 +10,10 @@ export const Action = createActions({
 })
 
 export const reducer = createReducer(initialState,{
-    [Action.Types.UPDATE_STATE]: (state, {state: newState}) => ({
+    [Action.Types.UPDATE_STATE]: (state, {state: newState}) =>
+        ({
         ...state,
-        ...newState
+        ...newState,
     })
 })
 

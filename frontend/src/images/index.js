@@ -11,7 +11,12 @@ import main_parttern1 from './main_parttern1.svg';
 import main_parttern2 from './main_parttern2.svg';
 import visual_parttern1 from './visual_parttern1.svg';
 import visual_parttern2 from './visual_parttern2.svg';
-import apple_icn from './apple_icn.svg'
+
+import apple_icn from './icons/apple_icn.svg'
+import cam_icn_camera from './icons/main_cam_icn_camera.svg'
+import cam_icn_interactive from './icons/main_cam_icn_interactive.svg'
+import cam_icn_game from './icons/main_cam_icn_game.svg'
+
 
 export const Images = {
     dropdown,
@@ -27,4 +32,7 @@ export const Images = {
     visual_parttern1,
     visual_parttern2,
     apple_icn,
+    cam_icn_camera,
+    cam_icn_interactive,
+    cam_icn_game
 }

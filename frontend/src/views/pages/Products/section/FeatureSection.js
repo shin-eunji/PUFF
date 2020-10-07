@@ -64,7 +64,6 @@ const Text = styled.div`
         margin-left: 60px;
         margin-right: 0;
     }
-    
 `;
 const Preview = styled.div`
     width: ${pxToRem(760)};
