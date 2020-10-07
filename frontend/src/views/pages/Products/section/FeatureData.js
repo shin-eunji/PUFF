@@ -1,3 +1,6 @@
+import {Color} from "../../../../lib/Styled";
+import React from "react";
+
 export const FeatureData = {
     caster: [
         {

@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ContentContainer} from "../../../components/Components.Styled";
+import {ContentContainer, IconBox} from "../../../components/Components.Styled";
 import {Color, pxToRem} from "../../../../lib/Styled";
 
 function PaginationItem (props) {
 
     const {
-        icon,
         title,
+        sort,
     } = props;
 
     return (
         <Container >
             <SContentContainer>
                 <PageItem>
-                    <Icon>{icon}</Icon>
+                    <IconBox sort={sort}></IconBox>
                     <Text>{title}</Text>
                 </PageItem>
             </SContentContainer>

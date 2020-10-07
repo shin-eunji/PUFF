@@ -16,7 +16,7 @@ function FeatureSection (props) {
     return (
         <Container className={cn({reverse})}>
             <SContentContainer>
-                <Text>
+                <Text className={cn({reverse})}>
                     <h5>{thumbnail}</h5>
                     <h2>{title}</h2>
                     <p>{description}</p>
@@ -32,11 +32,9 @@ const Container = styled.div`
 `
 const SContentContainer = styled(ContentContainer)`
     display:flex;
+    align-items:center;
     .reverse & {
         flex-direction: row-reverse;
-        Text {
-            margin-left: 60px;
-        }
     }
 `;
 const Text = styled.div`
@@ -49,16 +47,22 @@ const Text = styled.div`
         margin-bottom: 20px;
     }
     h2 {
+        color: #000;  
         font-size: ${pxToRem(42)};
         font-weight: 900;
         line-height: 1.2;
-        margin-bottom: 30px;
+        margin-bottom: ${pxToRem(30)};
     }
     p {
         color: #222;
-        font-weight: 500;
-        line-height: 1.4;
-      
+        font-size: ${pxToRem(20)};
+        font-weight: 400;
+        font-stretch: normal;
+        line-height: 1.8;
+    }
+    .reverse & {
+        margin-left: 60px;
+        margin-right: 0;
     }
     
 `;

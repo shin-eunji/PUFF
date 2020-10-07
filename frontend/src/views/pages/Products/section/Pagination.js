@@ -4,21 +4,23 @@ import {Color, pxToRem} from "../../../../lib/Styled";
 import PaginationItem from "./PaginationItem";
 import {ContentContainer} from "../../../components/Components.Styled";
 
-function Pagination (props) {
+function Pagination(props) {
 
     const {} = props;
 
     return (
         <Container>
             <SContentContainer>
-                <Item title={"퍼프 캐스터"}
-                                page={Color.TOPAZ}
+                <PaginationItem title={"퍼프 캐스터"}
+                                sort={'caster'}
                 />
-                <Item title={"퍼프 채팅창"}
-                      TOMAZ={Color}
+                <PaginationItem title={"퍼프 채팅창"}
+                                sort={'play'}
                 />
-                <Item title={"퍼프 캠"}
-                                page={Color.TOPAZ}
+
+                <PaginationItem title={"퍼프 캠"}
+                                sort={'cam'}
+                                disable
                 />
             </SContentContainer>
         </Container>
@@ -36,12 +38,5 @@ const SContentContainer = styled(ContentContainer)`
     align-items:center;
     justify-content: space-around;   
     width: 100%;
-    background: ${Color.LIME};
-`;
-
-const Item = styled(PaginationItem)`
-    ${props => props.TOMAZ && `
-        background: ${Color.TOPAZ};
-    `}
 `;
 export default Pagination;

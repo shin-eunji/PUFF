@@ -50,7 +50,7 @@ function Nav (props) {
     return (
         <Container>
             {
-                routes.map((route, index) => <NavItem key={index} {...route} />)
+                routes.map((route, index) => <NavItem key={index} {...route}/>)
             }
         </Container>
     )

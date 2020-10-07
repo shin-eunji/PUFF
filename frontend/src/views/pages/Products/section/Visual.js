@@ -56,7 +56,6 @@ function Visual (props) {
 
 const Container = styled.div`
   background: ${Color.DARK};
-  min-height: ${pxToRem(880)};
   height: calc(100vh - 80px);
   display:flex;
   flex-direction:column;
@@ -69,6 +68,9 @@ const SContentContainer = styled(ContentContainer)`
 `;
 const Text = styled.div`
     flex: 1;
+    position:relative;
+    top: 0;
+    left: 0;
     h2 {
       font-size: ${pxToRem(48)};
       font-weight: 800;
@@ -128,6 +130,17 @@ const Text = styled.div`
             }
         }
     }
+    
+    &::before{
+        content: '';
+        position:absolute;
+        top: ${pxToRem(-20)};
+        left: ${pxToRem(-100)};
+        width: ${pxToRem(430)};
+        height: ${pxToRem(364)};
+        background: url(${Images.main_parttern1}) 0  0 / 100% no-repeat;
+        z-index: 1000;
+    }
 `;
 const Thumbnail = styled.div`
     position:relative;
@@ -140,7 +153,7 @@ const Thumbnail = styled.div`
         right: ${pxToRem(-50)};
         width: ${pxToRem(470)};
         height: ${pxToRem(600)};
-        background-image: url(${Images.visual_parttern});
+        background: url(${Images.main_parttern2}) 0  0 / 100% no-repeat;
         z-index: 1000;
     }
 `;

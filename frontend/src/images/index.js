@@ -6,7 +6,10 @@ import youtube from './icons/top_icn_youtube.svg'
 import mixer from './icons/top_icn_mixer.svg'
 
 import visual from './visual.png';
-import visual_parttern from './visual_parttern.png';
+import main_parttern1 from './main_parttern1.svg';
+import main_parttern2 from './main_parttern2.svg';
+import visual_parttern1 from './visual_parttern1.svg';
+import visual_parttern2 from './visual_parttern2.svg';
 
 export const Images = {
     dropdown,
@@ -16,5 +19,8 @@ export const Images = {
     youtube,
     mixer,
     visual,
-    visual_parttern
+    main_parttern1,
+    main_parttern2,
+    visual_parttern1,
+    visual_parttern2,
 }

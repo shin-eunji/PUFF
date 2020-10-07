@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Visual from "./section/Visual";
 import {Images} from "../../../images";
 import Features from "./section/Features";
+import Footer from "../../components/Footer";
 
 function Caster(props) {
 
@@ -20,6 +21,9 @@ function Caster(props) {
             />
 
             <Features/>
+
+            <Footer/>
+
         </Container>
     )
 }
