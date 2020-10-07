@@ -47,7 +47,6 @@ export const Button = styled.div`
     font-weight:bold;
     border: 1px solid transparent; 
     border-radius: ${pxToRem(6)};
-    background: #151ad40;
     &:focus {
         outline: 0;
     }
@@ -66,6 +65,17 @@ export const Button = styled.div`
     ${props => props.sort === 'lime' && `
         background: ${Color.LIME};
         color: ${props.disabled ? '#151ad40' : '#151a1d'};
+    `}
+    ${props => props.sort === 'dark' && `
+        background: ${Color.DARK};
+        border-radius: 6px;
+        color: ${props.disabled ? '#fff' : '#fff'};
+    `}
+    ${props => props.sort === 'line' && `
+        background: #fff;
+        border: 1px solid #222;
+        border-radius: 6px;    
+        color: ${props.disabled ? '#222222' : '#222222'};
     `}
     
     ${props => props.full && `

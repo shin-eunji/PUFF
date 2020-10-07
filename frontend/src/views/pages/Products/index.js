@@ -4,7 +4,6 @@ import {Switch, Route} from "react-router-dom";
 import Caster from "./Caster";
 import Play from "./Play";
 import Cam from "./Cam";
-import Login from "../Login";
 
 function Products (props) {
 
