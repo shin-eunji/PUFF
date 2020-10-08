@@ -1,48 +1,62 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import {Images} from "../../../images";
+import PriceItem from "./PriceItem";
 
 function PriceCheck (props) {
 
     const {} = props;
 
-    const price = [
+    const prices = [
         {
-            id: "",
-            text: "일이삼사오육칠팔구십",
-            isChecked: false
+            text: '일이삼사오육칠팔구십',
+            url: Images.price_check_on,
+            isChecked: false,
         },
         {
-            id: "",
-            text: "일이삼사오육칠팔구십",
-            isChecked: false
+            text: '일이삼사오육칠팔구십',
+            url: Images.price_check_on,
+            isChecked: false,
         },
         {
-            id: "",
-            text: "일이삼사오육칠팔구십",
-            isChecked: false
+            text: '일이삼사오육칠팔구십',
+            url: Images.price_check_on,
+            isChecked: false,
         },
-    ]
+        {
+            text: '일이삼사오육칠팔구십',
+            url: Images.price_check_on,
+            isChecked: false,
+        },
+        {
+            text: '일이삼사오육칠팔구십',
+            url: Images.price_check_off,
+            isChecked: true,
+        },
+        {
+            text: '일이삼사오육칠팔구십',
+            url: Images.price_check_off,
+            isChecked: true,
+        },
 
+
+    ]
+    const checkList = prices.map((price, index) => <PriceItem key={index} {...price} />)
     return (
         <Container>
             <Text>
-                {
-                    price.map((text, index) => <p key={index}>{price.}</p>)
-                }
+                {checkList}
             </Text>
-            {/*<img src={Images.price_check_off} alt=""/>*/}
-            {/*<img src={Images.price_check_on} alt=""/>*/}
-            {
-                
-            }
         </Container>
     )
 }
 
 const Container = styled.div`
+    display:flex;
+    justify-content:flex-start;
+    margin-top: 50px;
 `
 const Text = styled.div`
-    
+
 `;
 export default PriceCheck;

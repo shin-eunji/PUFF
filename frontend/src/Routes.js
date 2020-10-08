@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Route, Switch, Redirect} from "react-router-dom";
+import {Route, Switch, Redirect, withRouter} from "react-router-dom";
 
 import Products from "./views/pages/Products";
-import Login from "./views/pages/Login";
+import LoginRoute from "./views/pages/Login";
 import Price from "./views/pages/Price";
+import AllComponents from "./views/components/All/index";
 
 
 function Routes (props) {
@@ -16,7 +17,8 @@ function Routes (props) {
             <Switch>
                 <Route path={'/products'} component={Products} />
                 <Route path={'/price'} component={Price} />
-                <Route path={'/login'} component={Login} />
+                <Route path={'/login'} component={LoginRoute} />
+                <Route path={'/all'} component={AllComponents} />
 
                 <Redirect from={'/'} to={'/products/caster'}/>
             </Switch>

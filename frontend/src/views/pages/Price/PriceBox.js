@@ -24,9 +24,8 @@ function PriceBox (props) {
                     {price}
                     <p>one time payment</p>
                 </Price>
+                <PriceCheck/>
             </Text>
-
-            <PriceCheck/>
 
             <BuyButton sort={sort} full={full}>
                 {buybutton}
@@ -46,6 +45,7 @@ const Container = styled.div`
     align-items:flex-start;
     justify-content: flex-start;
     padding: 40px;
+    margin: 0 15px;
 `
 const Text = styled.div`
     flex: 1;

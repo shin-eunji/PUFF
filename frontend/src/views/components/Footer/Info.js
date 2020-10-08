@@ -32,6 +32,8 @@ const Container = styled.div`
 `
 const SContentContainer = styled(ContentContainer)`
     position:relative;
+    left: 0;
+    bottom: 0;
     display:flex;
     align-items:center;
     justify-content:center;

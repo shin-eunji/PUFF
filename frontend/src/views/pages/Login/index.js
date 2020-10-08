@@ -1,17 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Route, Switch} from "react-router-dom";
+import Login from "./Login";
 
-function Login (props) {
+function LoginRoute (props) {
 
     const {} = props;
 
     return (
         <Container>
-            Login
+            <Switch>
+                <Route exact path={'/login'} component={Login}/>
+            </Switch>
         </Container>
     )
 }
 
 const Container = styled.div`
 `
-export default Login;
+export default LoginRoute;

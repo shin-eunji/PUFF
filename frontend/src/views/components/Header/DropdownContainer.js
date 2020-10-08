@@ -18,11 +18,6 @@ function DropdownContainer (props) {
 }
 
 const Container = styled(Dropdown)`
-position:relative;
-top: 0;
-right: 0;
-width: 300px;
-height: 300px;
-background: #000;
+
 `
 export default DropdownContainer;
