@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Color, pxToRem} from "../../../lib/Styled";
 import {Button} from "../../components/Button/Button.Styled";
+import PriceCheck from "./PriceCheck";
 
 function PriceBox (props) {
 
@@ -24,6 +25,9 @@ function PriceBox (props) {
                     <p>one time payment</p>
                 </Price>
             </Text>
+
+            <PriceCheck/>
+
             <BuyButton sort={sort} full={full}>
                 {buybutton}
             </BuyButton>

@@ -17,6 +17,9 @@ import cam_icn_camera from './icons/main_cam_icn_camera.svg'
 import cam_icn_interactive from './icons/main_cam_icn_interactive.svg'
 import cam_icn_game from './icons/main_cam_icn_game.svg'
 
+import price_check_on from './icons/pricing_icn_check.svg'
+import price_check_off from './icons/pricing_icn_uncheck.svg'
+
 
 export const Images = {
     dropdown,
@@ -34,5 +37,7 @@ export const Images = {
     apple_icn,
     cam_icn_camera,
     cam_icn_interactive,
-    cam_icn_game
+    cam_icn_game,
+    price_check_on,
+    price_check_off,
 }
