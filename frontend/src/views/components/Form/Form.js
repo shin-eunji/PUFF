@@ -56,11 +56,11 @@ function Form(props) {
 
             <Text>
                 <UserPassword>
-                    <Item to={() => navigate('/userpassword')}>비밀번호를 잊으셨나요?</Item>
+                    <Item onClick={() => navigate('/login/password')}>비밀번호를 잊으셨나요?</Item>
                 </UserPassword>
                 <Join>
                     <p>계정이 필요하세요?</p>
-                    <Item to={() => navigate('/join')}>가입하기</Item>
+                    <Item onClick={() => navigate('/join')}>가입하기</Item>
                 </Join>
             </Text>
         </Container>
@@ -102,5 +102,6 @@ const Join = styled.div`
 const Item = styled.div`
     color: ${Color.TOPAZ};
     opacity: 1;
+    cursor: pointer;
 `;
 export default Form;
