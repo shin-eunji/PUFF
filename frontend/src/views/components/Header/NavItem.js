@@ -54,6 +54,7 @@ const Item = styled.div`
     line-height: 1.5;
     display:flex;
     align-items:center;
+    cursor: pointer;
     .isActive & {
       opacity: 1;
     }

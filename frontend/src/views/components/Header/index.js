@@ -5,6 +5,7 @@ import Member from "./Member";
 import {withRouter} from "react-router-dom";
 import {ContentContainer} from "../Components.Styled";
 import {Color, pxToRem} from "../../../lib/Styled";
+import {navigate} from "../../../lib/History";
 
 function Header (props) {
 
@@ -14,7 +15,7 @@ function Header (props) {
     return (
         <Container>
             <SContentContainer>
-                <Logo>puff</Logo>
+                <Logo to={() => navigate('/products/caster')}>puff</Logo>
                 <Gnb>
                     <Nav/>
                     <Member/>
@@ -42,6 +43,7 @@ const Logo = styled.div`
     text-transform: uppercase;
     display:flex;
     align-items:center;
+    cursor: pointer;
 `;
 const Gnb = styled.div`
     display:flex;
