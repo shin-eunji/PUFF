@@ -6,6 +6,7 @@ import Products from "./views/pages/Products";
 import LoginRoute from "./views/pages/Login";
 import Price from "./views/pages/Price";
 import AllComponents from "./views/components/All/index";
+import Fail from "./views/pages/fail";
 
 
 function Routes (props) {
@@ -19,6 +20,7 @@ function Routes (props) {
                 <Route path={'/price'} component={Price} />
                 <Route path={'/login'} component={LoginRoute} />
                 <Route path={'/all'} component={AllComponents} />
+                <Route path={'/fail'} component={Fail} />
 
                 <Redirect from={'/'} to={'/products/caster'}/>
             </Switch>

@@ -4,13 +4,16 @@ import {pxToRem} from "../../lib/Styled";
 
 function LoginText (props) {
 
-    const {} = props;
+    const {
+        title,
+        description
+    } = props;
 
     return (
         <Container>
             <Text>
-                <h2>환영합니다 :D</h2>
-                <p>다시 만나서 반가워요!</p>
+                <h2>{title}</h2>
+                <p>{description}</p>
             </Text>
         </Container>
     )

@@ -14,7 +14,9 @@ function Login (props) {
     return (
         <Container>
             <SContentContainer>
-                <LoginText/>
+                <LoginText title={"환영합니다 :D"}
+                           description={"다시 만나서 반가워요!"}
+                />
                 <LoginForm/>
             </SContentContainer>
 

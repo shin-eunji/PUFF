@@ -19,6 +19,7 @@ import cam_icn_game from './icons/main_cam_icn_game.svg'
 
 import price_check_on from './icons/pricing_icn_check.svg'
 import price_check_off from './icons/pricing_icn_uncheck.svg'
+import img_error from './img_error.svg'
 
 
 export const Images = {
@@ -40,4 +41,5 @@ export const Images = {
     cam_icn_game,
     price_check_on,
     price_check_off,
+    img_error,
 }

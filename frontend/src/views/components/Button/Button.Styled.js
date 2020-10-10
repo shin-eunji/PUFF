@@ -120,22 +120,17 @@ export const ButtonCom = styled.button`
         font-size: ${pxToRem(18)};
         color: ${props.disabled ? `${Color.DARK}` : `${Color.DARK}`};
     `}
-    ${props => props.presses && `
-        background: ${props.disabled ? `${Color.TOPAZ}` : `${Color.TOPAZ}`};
-        font-size: ${pxToRem(18)}; 
-        color: ${props.disabled ? `${Color.DARK}` : `${Color.DARK}`};
+    
+    ${props => props.normal === 'presses' && `
         opacity: .4;
     `}
-    ${props => props.disabled && `
+    ${props => props.normal === 'disabled' && `
         cursor: not-allowed;
-        background: ${props.disabled ? `${Color.TOPAZ}` : `${Color.TOPAZ}`};
-        font-size: ${pxToRem(18)};
-        color: ${props.disabled ? `${Color.DARK}` : `${Color.DARK}`};
         &:disabled {
             color: ${Color.DARKOPACITY} 
         }
     `}
-    ${props => props.lineNormal && `
+    ${props => props.line && `
         border: 1px solid ${Color.TOPAZ};
         border-radius: ${pxToRem(6)};
         background: none; 
@@ -143,23 +138,11 @@ export const ButtonCom = styled.button`
         font-weight: 500;
         color: ${props.disabled ? `${Color.TOPAZ}` : `${Color.TOPAZ}`};
     `}
-    ${props => props.linePresses && `
-        border: 1px solid ${Color.TOPAZ};
-        border-radius: ${pxToRem(6)};
-        background: #000;
-        font-weight: 500;
-        font-size: ${pxToRem(16)}; 
-        color: ${props.disabled ? `${Color.TOPAZ}` : `${Color.TOPAZ}`};
+    ${props => props.line === 'presses' && `
         opacity: .4;
     `}
-    ${props => props.lineDisabled && `
+    ${props => props.line === 'disabled' && `
         cursor: not-allowed;
-        border: 1px solid ${Color.TOPAZ};
-        border-radius: ${pxToRem(6)};
-        background: none;
-        font-weight: 500;
-        font-size: ${pxToRem(16)};
-        color: ${props.disabled ? `${Color.TOPAZ}` : `${Color.TOPAZ}`};
         opacity: .4;
     `}
 `;
