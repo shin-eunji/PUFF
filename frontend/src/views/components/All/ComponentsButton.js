@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ButtonCom} from "../Button/Button.Styled";
+import {Button} from "../Button/Button.Styled";
 
 function ComponentsButton (props) {
 
@@ -25,9 +25,6 @@ function ComponentsButton (props) {
 
 const Container = styled.div`
 `
-const Button = styled(ButtonCom)`
-    
-`;
 const ButtonContainer = styled.div`
     display:flex;
     align-items:center;

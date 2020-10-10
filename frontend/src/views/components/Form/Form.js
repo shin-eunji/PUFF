@@ -6,10 +6,15 @@ import {Button} from "../Button/Button.Styled";
 import {navigate} from "../../../lib/History";
 import {Color, pxToRem} from "../../../lib/Styled";
 import {useSelector} from "react-redux";
+import FormInput from "./FormInput";
+import {Message} from "../Text/Message.Styled";
+import Login from "../../pages/Login/Login";
 
 function Form(props) {
 
-    const {} = props;
+    const {
+        topaz
+    } = props;
 
     const {register, watch, errors, handleSubmit} = useForm();
 
@@ -18,90 +23,27 @@ function Form(props) {
     const onSubmit = data => console.log("Login Button Click!!!", data);
 
     return (
-        <Container>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <Input id="email"
-                       name="email"
-                       type="text"
-                       ref={register({})}
-                       placeholder={"이메일을 입력하세요"}
-                       onChange={(e) => {
-                           setValue({
-                               email: e.target.value
-                           })
-                       }}
-                       required
-                />
-                {errors.email && ""}
-                <span role="alert">필수정보입니다.</span>
-                <Input id="password"
-                       name="password"
-                       type="password"
-                       ref={register({})}
-                       placeholder={"비밀번호를 입력하세요"}
-                       onChange={(e) => {
-                           setValue({
-                               password: e.target.value
-                           })
-                       }}
-                />
-                {errors.password && ""}
-                <span role="alert">필수정보입니다.</span>
-            </form>
-
-            <LoginButton size={"full"}
-                         sort={"caster"}
-                         type="submit"
-            >로그인</LoginButton>
-
-            <Text>
-                <UserPassword>
-                    <Item onClick={() => navigate('/login/password')}>비밀번호를 잊으셨나요?</Item>
-                </UserPassword>
-                <Join>
-                    <p>계정이 필요하세요?</p>
-                    <Item onClick={() => navigate('/join')}>가입하기</Item>
-                </Join>
-            </Text>
+        <Container onSubmit={onSubmit}>
+            <LoginForm>
+                <Login/>
+            </LoginForm>
         </Container>
     )
 }
 
 const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items:center;
     span {
         color: ${Color.RED};
         font-size: 11px;
         font-weight: 300;
     }
 `
-const LoginButton = styled(Button)`
-    margin-top: ${pxToRem(54)};
-`;
-const Text = styled.div`
-    position:relative;
-    top: 0;
-    left: 0;
-    font-size: ${pxToRem(13)};
-    font-weight: 300;
-`;
-const UserPassword = styled.div`
-    position:relative;
-    top: ${pxToRem(-90)};
-    left: 0;
-`;
-const Join = styled.div`
-    display:flex;
+const LoginForm = styled.div`
+    display: flex;
+    flex-direction: column;
     align-items:center;
-    justify-content:flex-start;
-    p {
-      color: #fff;
-      opacity: .3;
-      margin-right: ${pxToRem(6)};
-    }
-`;
-const Item = styled.div`
-    color: ${Color.TOPAZ};
-    opacity: 1;
-    cursor: pointer;
 `;
 export default Form;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {pxToRem} from "../../lib/Styled";
 
-function LoginText (props) {
+function LoginTitle (props) {
 
     const {
         title,
@@ -28,7 +28,7 @@ const Text = styled.div`
     align-items:center;
     justify-content:center;
     color: #fff;
-    margin: 100px 0 50px;
+    padding-bottom: ${pxToRem(50)};
     h2 {
         font-size: ${pxToRem(36)};
         font-weight: 900;
@@ -39,4 +39,4 @@ const Text = styled.div`
         font-weight: 400;
     }
 `;
-export default LoginText;
+export default LoginTitle;

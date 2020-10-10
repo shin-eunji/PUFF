@@ -27,25 +27,26 @@ export const ButtonGroup = styled.div`
     `}
 `;
 
-export const Button = styled.div`
+export const Button = styled.button`
     position:relative;
     display:flex;
     align-items:center;
     justify-content:center;
+    width: ${pxToRem(320)};
     height: ${pxToRem(50)};
-    padding: 0 ${pxToRem(20)};
-    line-height: 2.05;
+    color: ${Color.DARK};
     font-size: ${pxToRem(18)};
-    color: #000;
-    background-color: #fff;
+    font-weight:bold;
+    line-height: 2;
+    background-color: transparent;
     background-image: none;
     white-space: nowrap;
     text-align:center;
     cursor: pointer;
     transition: all .3s cubic-bezier(.645, .045, .355, 1);
     user-select: none;
-    font-weight:bold;
-    border: 1px solid transparent; 
+    border: 1px solid transparent;
+    margin-top: ${pxToRem(34)}; 
     border-radius: ${pxToRem(6)};
     &:focus {
         outline: 0;
@@ -89,32 +90,6 @@ export const Button = styled.div`
     ${props => props.size === 'large' && `
         height: ${pxToRem(60)}      
     `}
-`;
-
-export const ButtonCom = styled.button`
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width: ${pxToRem(180)};
-    height: ${pxToRem(50)};
-    color: ${Color.DARK};
-    font-size: ${pxToRem(18)};
-    font-weight:bold;
-    line-height: 2;
-    background-color: transparent;
-    background-image: none;
-    white-space: nowrap;
-    text-align:center;
-    cursor: pointer;
-    transition: all .3s cubic-bezier(.645, .045, .355, 1);
-    user-select: none;
-    border: 1px solid transparent; 
-    border-radius: ${pxToRem(6)};
-    margin: 0 ${pxToRem(20)};
-    &:focus {
-        outline: 0;
-    }
     ${props => props.normal && `
         background: ${Color.TOPAZ};
         font-size: ${pxToRem(18)};

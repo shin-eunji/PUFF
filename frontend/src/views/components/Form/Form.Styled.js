@@ -18,7 +18,6 @@ export const Input = styled.input`
     border-radius: ${pxToRem(6)};
     white-space: nowrap;
     text-align:left;
-    margin: ${pxToRem(20)} 0 0;
     transition: all .3s cubic-bezier(.645, .045, .355, 1);
     opacity: 1;
     &::placeholder {
