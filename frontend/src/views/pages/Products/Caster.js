@@ -4,6 +4,8 @@ import Visual from "./section/Visual";
 import {Images} from "../../../images";
 import FeatureCaster from "./section/FeatureCaster";
 import Footer from "../../components/Footer";
+import Features from "./section/Features";
+import {FeatureData as data} from "./section/FeatureData";
 
 function Caster(props) {
 
@@ -21,7 +23,7 @@ function Caster(props) {
                     more={"메뉴얼 상세보기"}
             />
 
-            <FeatureCaster/>
+            <Features data={data.caster}/>
             <Footer sort={"caster"}
                     footerButton={"PUFFCASTER 다운로드"}
                     downlaodIcon={Images.download}

@@ -4,6 +4,8 @@ import Visual from "./section/Visual";
 import {Images} from "../../../images";
 import FeaturePlay from "./section/FeaturePlay";
 import Footer from "../../components/Footer";
+import Features from "./section/Features";
+import {FeatureData as data} from "./section/FeatureData";
 
 function Cam(props) {
 
@@ -23,7 +25,7 @@ function Cam(props) {
                     more={"가이드 영상 보기"}
             />
 
-            <FeaturePlay/>
+            <Features data={data.play}/>
 
             <Footer sort={"play"}
                     footerButton={"퍼프 플레이 사용해보기"}

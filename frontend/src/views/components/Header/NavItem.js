@@ -2,52 +2,57 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import cn from 'classnames'
 import {Images} from "../../../images";
-import {pxToRem} from "../../../lib/Styled";
+import SubMenu from "./SubMenu";
+import {Color, pxToRem} from "../../../lib/Styled";
 import {navigate} from "../../../lib/History";
-import DropdownContainer from "./DropdownContainer";
-import appActions from "../../../redux/actionCreators";
-import {useDispatch, useSelector} from "react-redux";
 
-function NavItem (props) {
+function NavItem(props) {
 
     const {
         name,
-        dropdown,
         to,
         isActive,
         subRoutes,
+        location
     } = props;
 
-    const app = useSelector(state => state.app)
-    const dispatch = useDispatch()
+    const [menu, setMenu] = useState(false)
+
+    const onClick = () => {
+        if(subRoutes) {
+            setMenu(true)
+        } else {
+            navigate(to)
+        }
+    }
 
     return (
         <Container className={cn('NavItem', {isActive})}>
-            <Item dropdown onClick={() =>
-                console.log(appActions.updateState)
-                // appActions.updateState({
-                // dropdown: true
-                //
-                // })
-            }>{name}
+            <Name onClick={onClick}>
+                {name}
                 {
                     subRoutes &&
                     <img src={Images.dropdown} alt="dropdown"/>
 
                 }
-                {
-                    subRoutes && app &&
-                    <DropdownContainer dropdown={dropdown}/>
-                }
-            </Item>
+            </Name>
+            {
+                menu &&
+                <SubMenu name={name}
+                         location={location}
+                         routes={subRoutes}
+                         onClose={() => setMenu(false)}
+                />
+            }
         </Container>
     )
 }
 
 const Container = styled.div`
     padding: 0 ${pxToRem(25)};
+    position:relative;
 `
-const Item = styled.div`
+const Name = styled.div`
     color: #fff;
     opacity: .6;
     font-size: ${pxToRem(14)};
@@ -62,4 +67,5 @@ const Item = styled.div`
         margin-left: ${pxToRem(10)};
     }
 `;
+
 export default NavItem;

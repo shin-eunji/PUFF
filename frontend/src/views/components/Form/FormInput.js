@@ -7,7 +7,6 @@ function FormInput(props) {
     const {
         type,
         name,
-        ref,
         placeholder,
         register,
         errorType,
@@ -17,9 +16,8 @@ function FormInput(props) {
     return (
         <Container type={type}
                    name={name}
-                   ref={ref}
                    placeholder={placeholder}
-                   register={register}
+                   ref={register}
                    errorType={errorType}
         >
         </Container>

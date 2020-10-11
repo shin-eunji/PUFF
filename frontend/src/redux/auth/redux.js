@@ -1,10 +1,13 @@
 import {createActions, createReducer} from 'reduxsauce'
 
 const initialState = {
+
 }
 
 export const Action = createActions({
-    updateState: ['state']
+    updateState: ['state'],
+    signUp: ['data'],
+    signIn: ['data'],
 })
 
 export const reducer = createReducer(initialState,{

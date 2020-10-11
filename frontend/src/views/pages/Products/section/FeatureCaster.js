@@ -1,30 +1,116 @@
 import React from 'react';
 import styled from 'styled-components';
 import FeatureSection from "./FeatureSection";
+import cn from "classnames";
+import {ContentContainer} from "../../../components/Components.Styled";
+import {Color, pxToRem} from "../../../../lib/Styled";
+import cam_icn_camera from "../../../../images/icons/main_cam_icn_camera.svg";
+import {Images} from "../../../../images";
 
 function FeatureCaster (props) {
 
-    const {} = props;
+    const {
+        reverse
+    } = props;
 
     return (
         <Container>
-            <FeatureSection thumbnail={"PUFF EFFECT"}
-                            title={"라이브를 \n 더욱 라이브답게!"}
-                            description={"캐스터에서 지원하는 이펙트 아이템은\n누구나 손쉽게 사용할 수 있으며, 당신\n의 라이브를 마치 편집된 영상과 같이\n바꾸어줍니다."}
-            />
-            <FeatureSection thumbnail={"TEXT CUSTOMIZING"}
-                            title={"생동감있는\n라이브 텍스트"}
-                            description={"평범한 공지는 시청자의 눈길을 사로잡\n지 못합니다. 캐스터는 텍스트에도 다양\n한 시각적 효과를 사용할 수 있습니다. \n이제 더 생동감있는 라이브 텍스트를 입\n력해보세요."}
-                            reverse={true}
-            />
-            <FeatureSection thumbnail={"MULTI - STRAMING"}
-                            title={"여러 플랫폼에\n동시 송출하세요"}
-                            description={"캐스터는 여러 라이브 플랫폼이 동시에 \n방송하는 멀티 스트리밍 기능을 지원합\n니다. 이제 하나의 라이브 플랫폼이 아닌\n여러 플랫폼에서 동시에 라이브를 진행\n해보세요."}
-            />
+            <SContentContainer>
+                <Text className={cn({reverse})}>
+                    <h5>PUFF CAM</h5>
+                    <h2>ABCD캐스터와 호환되는 ABCD캠은</h2>
+                    <p>높은 품질의 영상 전송으로 퀄리티 높은 스트리밍이 가능합니다</p>
+                </Text>
+                <Preview></Preview>
+                <Gnb>
+                    <Nav>
+                        <img src={Images.cam_icn_camera} alt="camera"/>
+                        <p>아이폰으로 촬영하는 화면을 캡쳐하여<br/>다양한 라이브 방송 플랫폼으로<br/>스트리밍이 가능합니다.</p>
+                    </Nav>
+                    <Nav>
+                        <img src={Images.cam_icn_interactive} alt="interactive"/>
+                        <p>필터와 효과를 활용하여 <br/>시청자들과 인터랙티브한 <br/>라이브 스트리밍을 해보세요.</p>
+                    </Nav>
+                    <Nav>
+                        <img src={Images.cam_icn_game} alt="game"/>
+                        <p>게임, 쇼핑등의 화면을 캡쳐하여<br/>라이브 스트리밍이 가능합니다.</p>
+                    </Nav>
+                </Gnb>
+            </SContentContainer>
         </Container>
     )
 }
 
 const Container = styled.div`
+    margin: 150px 0;  
 `
+const SContentContainer = styled(ContentContainer)`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+`;
+const Text = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom: 60px;
+    h5 {
+        color: ${Color.TOPAZ};
+        font-size: ${pxToRem(18)};
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+    h2 {
+        color: #000;  
+        font-size: ${pxToRem(42)};
+        font-weight: 900;
+        line-height: 1.2;
+        margin-bottom: ${pxToRem(30)};
+    }
+    p {
+        color: #222;
+        font-size: ${pxToRem(20)};
+        font-weight: 400;
+        font-stretch: normal;
+        line-height: 1.8;
+    }
+    .reverse & {
+        margin-left: 60px;
+        margin-right: 0;
+    }
+`;
+const Preview = styled.div`
+    width: ${pxToRem(760)};
+    height: ${pxToRem(500)};
+    border-radius: ${pxToRem(6)};
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+    background-color: #272c33;
+`;
+const Gnb = styled.div`
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: 80px;
+`;
+const Nav = styled.nav`
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    width: ${pxToRem(340)};
+    height: ${pxToRem(200)};
+    img {
+        width: ${pxToRem(80)};
+        height: ${pxToRem(60)};
+        margin-bottom: ${pxToRem(30)};
+    }
+    p {
+        color: #222;
+        font-size: ${pxToRem(20)};
+        line-height: 1.6;
+        font-weight: 400;
+        text-align:center;
+    }
+`;
 export default FeatureCaster;

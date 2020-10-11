@@ -4,7 +4,6 @@ import FeatureSection from "./FeatureSection";
 import cn from "classnames";
 import {ContentContainer} from "../../../components/Components.Styled";
 import {Color, pxToRem} from "../../../../lib/Styled";
-import cam_icn_camera from "../../../../images/icons/main_cam_icn_camera.svg";
 import {Images} from "../../../../images";
 
 function FeatureCam (props) {

@@ -5,6 +5,7 @@ import NavItem from "./NavItem";
 function Nav (props) {
 
     const {
+        location
     } = props;
 
 
@@ -25,7 +26,7 @@ function Nav (props) {
                 },
                 {
                     name: 'puff chat',
-                    to: '/products/chat',
+                    to: '/products/play',
                     isActive: false,
                 },
                 {
@@ -50,7 +51,9 @@ function Nav (props) {
     return (
         <Container>
             {
-                routes.map((route, index) => <NavItem key={index} {...route}/>)
+                routes.map((route, index) => <NavItem key={index}
+                                                      location={location}
+                                                      {...route}/>)
             }
         </Container>
     )

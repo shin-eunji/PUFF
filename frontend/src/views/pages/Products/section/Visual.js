@@ -4,7 +4,8 @@ import {ContentContainer} from "../../../components/Components.Styled";
 import {Images} from "../../../../images";
 import {Button} from "../../../components/Button/Button.Styled";
 import {Color, pxToRem} from "../../../../lib/Styled";
-import Pagination from "./Pagination";
+import Nav from "./Nav";
+import Dots from "./Dots";
 
 function Visual (props) {
 
@@ -52,8 +53,9 @@ function Visual (props) {
                     <img src={thumbnail} alt="caster 썸네일"/>
                 </Thumbnail>
             </SContentContainer>
+                <Dots sort={sort}/>
 
-            <Pagination sort={sort}/>
+            <Nav sort={sort}/>
         </Container>
     )
 }
@@ -64,6 +66,7 @@ const Container = styled.div`
   display:flex;
   flex-direction:column;
   padding-top: 12vh;
+  min-height: ${pxToRem(800)};
 `
 const SContentContainer = styled(ContentContainer)`
     display:flex;

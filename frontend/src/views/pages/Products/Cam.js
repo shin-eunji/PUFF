@@ -4,6 +4,8 @@ import Visual from "./section/Visual";
 import {Images} from "../../../images";
 import FeatureCam from "./section/FeatureCam";
 import Footer from "../../components/Footer";
+import {FeatureData as data} from "./section/FeatureData";
+import Features from "./section/Features";
 
 function Cam(props) {
 
@@ -21,7 +23,7 @@ function Cam(props) {
                     thumbnail={Images.visual_caster}
                     more={"가이드 영상 보기"}
             />
-            <FeatureCam/>
+            <Features data={data.cam}/>
             <Footer sort={"cam"}
                     downlaodIcon={Images.apple_icn}
                     footerButton={"App Store 다운로드"}

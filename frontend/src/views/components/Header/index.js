@@ -10,6 +10,7 @@ import {navigate} from "../../../lib/History";
 function Header (props) {
 
     const {
+        location
     } = props;
 
     return (
@@ -17,7 +18,7 @@ function Header (props) {
             <SContentContainer>
                 <Logo to={() => navigate('/products/caster')}>puff</Logo>
                 <Gnb>
-                    <Nav/>
+                    <Nav location={location}/>
                     <Member/>
                 </Gnb>
             </SContentContainer>
@@ -29,6 +30,8 @@ function Header (props) {
 
 const Container = styled.div`
     background: ${Color.DARK};
+    position:relative;
+    z-index: 2000;
 `
 const SContentContainer = styled(ContentContainer)`
     display:flex;
