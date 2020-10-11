@@ -13,7 +13,7 @@ import {Button} from "../../components/Button/Button.Styled";
 import {Message, MessageLink} from "../../components/Text/Message.Styled";
 import {navigate} from "../../../lib/History";
 
-function Password(props) {
+function Password() {
 
     const {register, errors, handleSubmit} = useForm();
 

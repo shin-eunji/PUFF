@@ -11,9 +11,9 @@ function Member (props) {
 
     return (
         <Container>
-            <Button size={'small'}
+            <LoginButton size={'small'}
                     sort={'lime'}
-                    onClick={() => navigate('/login')} >로그인</Button>
+                    onClick={() => navigate('/login')} >로그인</LoginButton>
         </Container>
     )
 }
@@ -25,4 +25,8 @@ const Container = styled.div`
     cursor: pointer;
     width: ${pxToRem(185)};
 `
+const LoginButton = styled(Button)`
+    width: ${pxToRem(90)};
+    margin-top: ${pxToRem(0)};
+`;
 export default Member;

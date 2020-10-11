@@ -33,10 +33,12 @@ const Text = styled.div`
         font-size: ${pxToRem(36)};
         font-weight: 900;
         margin-bottom: 10px;
+        white-space: normal;
     }
     p {
         font-size: ${pxToRem(20)};
         font-weight: 400;
+        white-space: normal;
     }
 `;
 export default LoginTitle;
